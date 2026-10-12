@@ -1,0 +1,79 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   Global Design System — The Lenny Growth Assistant
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── Design tokens ── */
+:root {
+  /* Palette */
+  --accent:        hsl(243, 75%, 59%);   /* indigo-600 */
+  --accent-hover:  hsl(243, 75%, 52%);
+  --accent-2:      hsl(217, 91%, 60%);   /* blue-500  */
+
+  /* Surfaces (dark mode) */
+  --surface-0:     hsl(224, 15%, 9%);
+  --surface-1:     hsl(224, 14%, 13%);
+  --surface-2:     hsl(224, 13%, 18%);
+  --surface-3:     hsl(224, 12%, 22%);
+
+  /* Borders */
+  --border:        hsl(224, 12%, 22%);
+
+  /* Text */
+  --text-primary:   hsl(220, 20%, 95%);
+  --text-secondary: hsl(220, 12%, 65%);
+  --text-muted:     hsl(220, 10%, 45%);
+
+  /* Status colors */
+  --green:  hsl(142, 71%, 45%);
+  --yellow: hsl(38,  92%, 50%);
+  --red:    hsl(0,   84%, 60%);
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  background: var(--surface-0);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--surface-3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+/* ── Focus ── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ── Selection ── */
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+}

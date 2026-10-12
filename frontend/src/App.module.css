@@ -1,0 +1,32 @@
+/* ── App layout ── */
+.app {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ── Main area (everything right of the sidebar) ── */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+}
+
+/* ── Content area (below the status bar) ── */
+.content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  min-height: 0;
+}
+
+@media (max-width: 900px) {
+  .app { flex-direction: column; }
+}
+
+@media (max-width: 700px) {
+  .content { overflow-y: auto; flex-wrap: wrap; }
+  .content > * { min-width: 0; }
+}

@@ -1,0 +1,15 @@
+fastapi>=0.115,<1.0
+uvicorn[standard]
+sqlalchemy[asyncio]
+asyncpg
+alembic
+psycopg[binary]
+pgvector
+sentence-transformers
+claude-agent-sdk>=0.1.12,<1.0
+python-dotenv
+pwdlib[argon2]
+PyJWT[crypto]
+httpx
+pytest
+pytest-asyncio
